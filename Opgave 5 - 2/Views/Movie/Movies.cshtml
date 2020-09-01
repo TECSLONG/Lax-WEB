@@ -1,0 +1,27 @@
+﻿
+@{
+    ViewBag.Title = "Movies";
+
+}
+<h1>Movies</h1>
+
+<p></p>
+
+<div id="out-box">
+    <!-- A inner-box is created for each object in MovieList inside the out-box -->
+    @foreach (var i in ViewBag.MovieListClass)
+    {
+    <div class="inner-box">
+        <!-- Displaying the data inside the objects -->
+        <img src="@i.Thumbnail" />
+        <p id="Title">@i.Title</p>
+        <p>Rating: @i.Rating</p>
+        <p>Genre: @i.Genre</p>
+        <p>Runtime: @i.Runtime min</p>
+        <br />
+        <p>Price: @i.Price$</p>
+        <p>Date: @i.ReleaseDate</p>
+    </div>
+    }
+</div>
+
